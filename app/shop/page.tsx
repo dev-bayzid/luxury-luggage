@@ -31,6 +31,19 @@ function ShopContent() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
 
+  React.useEffect(() => {
+    const categoryParam = searchParams.get("category") || "";
+    const sortParam = (searchParams.get("sort") || searchParams.get("sortBy") || "featured") as FilterState["sortBy"];
+    setFilters((prev) => ({
+      ...prev,
+      category: categoryParam,
+      sortBy: ["featured", "price-asc", "price-desc", "rating", "newest", "bestselling"].includes(sortParam)
+        ? sortParam
+        : prev.sortBy,
+    }));
+    setCurrentPage(1);
+  }, [searchParams]);
+
   const resetFilters = () => {
     setFilters({
       category: "",

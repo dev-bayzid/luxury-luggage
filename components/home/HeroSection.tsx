@@ -36,15 +36,15 @@ export const HeroSection: React.FC = () => {
             </div>
 
             <h1 className="text-4xl sm:text-6xl xl:text-7xl font-extrabold font-display text-white tracking-tight leading-[1.08]">
-              The Art of <br className="hidden sm:inline" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-100 to-accent">
-                Timeless Voyage.
+              Luxury That <br className="hidden sm:inline" />
+              <span className="font-display italic text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-100 to-accent">
+                Travels.
               </span>
             </h1>
 
             <p className="text-base sm:text-lg text-neutral-300 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
-              Crafted from anodized aluminum and premium leather. Designed for
-              years of travel.
+              Crafted from premium aluminum and refined materials for travelers
+              who value timeless design and lasting durability.
             </p>
 
             {/* CTAs */}

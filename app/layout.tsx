@@ -1,12 +1,25 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Manrope, Cormorant_Garamond } from "next/font/google";
 import { ToastProvider } from "@/context/ToastContext";
 import { CurrencyProvider } from "@/context/CurrencyContext";
 import { CartProvider } from "@/context/CartContext";
 import { WishlistProvider } from "@/context/WishlistContext";
 import { QuickViewProvider } from "@/context/QuickViewContext";
-import { Navbar } from "@/components/Navbar/Navbar";
-import { Footer } from "@/components/layout/Footer";
+import { ClientLayoutWrapper } from "@/components/layout/ClientLayoutWrapper";
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+  display: "swap",
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "luxury-luggage | Haute Bagagerie & Luxury Travel Gear",
@@ -17,7 +30,6 @@ export const metadata: Metadata = {
     "aluminum suitcase",
     "cabin luggage",
     "carry-on spinner",
-    "leather duffel bag",
     "travel gear",
     "rimowa alternative",
     "tumi alternative",
@@ -45,16 +57,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="bg-secondary-offwhite text-primary min-h-screen flex flex-col antialiased">
+    <html lang="en" className={`${manrope.variable} ${cormorant.variable}`}>
+      <body className={`${manrope.className} font-sans bg-secondary-offwhite text-primary min-h-screen flex flex-col antialiased`}>
         <ToastProvider>
           <CurrencyProvider>
             <CartProvider>
               <WishlistProvider>
                 <QuickViewProvider>
-                  <Navbar />
-                  <main className="flex-1">{children}</main>
-                  <Footer />
+                  <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
                 </QuickViewProvider>
               </WishlistProvider>
             </CartProvider>

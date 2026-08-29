@@ -42,8 +42,8 @@ const config: Config = {
         }
       },
       fontFamily: {
-        sans: ["var(--font-jakarta)", "var(--font-manrope)", "sans-serif"],
-        display: ["var(--font-jakarta)", "sans-serif"],
+        sans: ["var(--font-manrope)", "sans-serif"],
+        display: ["var(--font-cormorant)", "serif"],
       },
       boxShadow: {
         'luxury': '0 20px 40px -15px rgba(0, 0, 0, 0.05), 0 0 1px 1px rgba(0,0,0,0.03)',
