@@ -5,11 +5,11 @@ import { CurrencyProvider } from "@/context/CurrencyContext";
 import { CartProvider } from "@/context/CartContext";
 import { WishlistProvider } from "@/context/WishlistContext";
 import { QuickViewProvider } from "@/context/QuickViewContext";
-import { Navbar } from "@/components/layout/Navbar";
+import { Navbar } from "@/components/Navbar/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "AURELIA & CO. | Haute Bagagerie & Luxury Travel Gear",
+  title: "luxury-luggage | Haute Bagagerie & Luxury Travel Gear",
   description:
     "Handcrafted aerospace aluminum and Tuscan leather luggage. Engineered in Zürich, perfected in Milan. Unconditional lifetime airline damage warranty.",
   keywords: [
@@ -22,18 +22,20 @@ export const metadata: Metadata = {
     "rimowa alternative",
     "tumi alternative",
   ],
-  authors: [{ name: "Aurelia & Co." }],
+  authors: [{ name: "luxury-luggage" }],
   openGraph: {
-    title: "AURELIA & CO. | Haute Bagagerie & Luxury Travel Gear",
-    description: "The Art of Timeless Voyage. Handcrafted luxury luggage with unconditional lifetime warranty.",
+    title: "luxury-luggage | Haute Bagagerie & Luxury Travel Gear",
+    description:
+      "The Art of Timeless Voyage. Handcrafted luxury luggage with unconditional lifetime warranty.",
     type: "website",
     locale: "en_US",
-    siteName: "AURELIA & CO.",
+    siteName: "luxury-luggage",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AURELIA & CO. | Haute Bagagerie",
-    description: "The Art of Timeless Voyage. Luxury luggage engineered in Zürich.",
+    title: "luxury-luggage | Haute Bagagerie",
+    description:
+      "The Art of Timeless Voyage. Luxury luggage engineered in Zürich.",
   },
 };
 
